@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>titulo de la paguina de explicacion</title>
+
+    <script type="text/javascript">
+    
+        var res=new Array;
+        var no=new Array;
+        var tures=new Array;
+        var explicares=new Array;
+        var calif=0;
+        
+        res[1]="a";
+        res[2]="b";
+        res[3]="a";
+        res[4]="c";
+        res[5]="a";
+        res[6]="b";
+        res[7]="c";
+        res[8]="a";
+        
+        explicares[1]="malo,la respuesta correcta es a";
+        explicares[2]="malo,la respuesta correcta es b";
+        explicares[3]="malo,la respuesta correcta es a";
+        explicares[4]="malo,la respuesta correcta es c";
+        explicares[5]="malo,la respuesta correcta es a";
+        explicares[6]="malo,la respuesta correcta es b";
+        explicares[7]="malo,la respuesta correcta es c";
+        explicares[8]="malo,la respuesta correcta es a";
+        
+        function Engine(question, answer){
+            tures[question]=answer;
+        }
+        
+        function Score(){
+            var answertext="RESULTADOS\n";
+            calif=0;
+            for(i=1;i<=8;i++){
+                answertext=answertext+"\nPregunta"+i+":";
+                if(res[i]!=tures[i]){
+                    answertext=answertext+explicares[i]+"\n";
+                }
+                else{
+                    answertext=answertext+"bien\n";
+                    calif++; }}
+                answertext=answertext+"\nCalificacion:"+calif;
+            
+                answertext=answertext+"\nDianostico:";
+                if(calif>=0){
+                    answertext=answertext+"malo";
+                }
+                if(calif>=1 &&calif<=2){
+                    answertext=answertext+"regular";
+                }
+                if(calif>=3 &&calif<=4){
+                    answertext=answertext+"bueno";
+                }
+                if(calif>=5 &&calif<=6){
+                    answertext=answertext+"bueno";
+                }
+                if(calif>=7 &&calif<=8){
+                    answertext=answertext+"exelente";
+                }
+                
+                alert(answertext);
+            
+        }
+            
+        
+        
+        
+    </script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+    <script src="main.js" language="javascript" type="text/javascript"></script>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="stylesp.css">
+</head>
+<body>
+
+
+
+
+    <div class="contenido">
+        <div class="header">
+            <div class="imagen">
+                <img src="pandasolo.png" width="100%" height="100%">
+            </div>
+            <div class="texto">
+                <p>FOCUS ON</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="secciones">
+
+        <article id="tab1">
+            <section class="explicaciondt">
+                <h1>Examen parcial x</h1>
+                <h6>Propiedades De Los Triángulos Según Sus Lados Y Ángulos</h6>
+
+                <form action="#" method="POST">
+<!--------------------------------------------------------------------------------------------------------------------->
+
+                    <p class="pregunta">1.¿como se clasifica lo triangulos dependiendo sus criterios?</p>
+                    <div class="radio">
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R1" value="a" onclick="Engine(1, this.value)" /><span>a) Por sus lados
+Por sus ángulos</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R1" value="b" onclick="Engine(1,this. value)" /><span>b) por su tamaño y grosor</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap"  name="R1" value="c" onclick="Engine(1,this. value)" /><span>c) por sus formas y su longuitu</span></p>
+                      </label>
+                    </div>
+<!--------------------------------------------------------------------------------------------------------------------->
+
+                    <p class="pregunta">2.¿Que triangulo tiene sus tres lados tienen la misma longitud?</p>
+                    <div class="radio">
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="a" onclick="Engine(2,this. value)" /><span>a) triangulo obtusángulo </span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="b" onclick="Engine(2,this. value)"/><span>b) Triángulo equilátero</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="c" onclick="Engine(2,this. value)" /><span>c) Triángulo acutángulo</span></p>
+                      </label>
+                    </div>
+<!--------------------------------------------------------------------------------------------------------------------->
+                    
+                    <p class="pregunta">3.resuelve el siguiente ejercicio  y responde con la respuesta correcta:
+                    una caja  tiene una altura  de 9cm y mide  en la base  6cm de largo. El area de la tapa mide 18cm ¿De cuanto es su volumen?</p>
+                    <div class="radio">
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="a" onclick="Engine(3,this. value)" /><span>a) 162cm</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="b" onclick="Engine(3,this. value)" /><span>b) 159cm</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="c" onclick="Engine(3,this. value)" /><span>c) 86cm</span></p>
+                      </label>
+                    </div>
+ <!--------------------------------------------------------------------------------------------------------------------->
+                
+                    
+                    <p class="pregunta">4.¿cuales son las figuras geométricas de lados rectos que se denominan ?</p>
+                    <div class="radio">
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="a" onclick="Engine(4,this. value)" /><span>a) recto</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="b" onclick="Engine(4,this. value)" /><span>b) curvos</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="c" onclick="Engine(4,this. value)" /><span>c) poligonos</span></p>
+                      </label>
+                    </div>
+                    
+ <!--------------------------------------------------------------------------------------------------------------------->             
+                    
+                    
+                    
+                
+                    
+           
+                </form>
+
+            </section>
+        </article>
+
+        <article id="tab2">
+            <section class="explicaciondt">
+                
+                    <div class="radio">
+                        <p class="pregunta">5.¿Si uno de sus ángulos es obtuso (mayor de 90°); los otros dos son agudos menor de 90°?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="a" onclick="Engine(5,this. value)" /><span>a) Triángulo obtusángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="b" onclick="Engine(5,this. value)" /><span>b) Triángulo acutángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="c" onclick="Engine(5,this. value)" /><span>c) respuestaTriángulo Rectángulo</span></p>
+                      </label>
+                    </div>
+                
+                
+                
+                <div class="radio">
+                        <p class="pregunta">6.¿ cual es Cuando sus tres ángulos son menores a 90°; el triángulo equilátero es un caso particular de triángulo acutángulo.?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="a" onclick="Engine(6,this. value)" /><span>a) Triángulo equiángulo </span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="b" onclick="Engine(6,this. value)" /><span>b)Triángulo acutángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="c" onclick="Engine(6,this. value)" /><span>c) Triángulo escaleno</span></p>
+                      </label>
+                    </div>
+                
+            
+                
+                
+                
+                <div class="radio">
+                        <p class="pregunta">7.¿cual es Si tiene dos lados de la misma longitud. Los ángulos que se oponen a estos lados tienen la misma medida?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="a" onclick="Engine(7,this. value)" /><span>a) Triángulo Rectángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="b" onclick="Engine(7,this. value)" /><span>b) Triángulo obtusángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="c" onclick="Engine(7,this. value)" /><span>c)Triángulo isósceles</span></p>
+                      </label>
+                    </div>
+                
+          
+                
+                
+                <div class="radio">
+                        <p class="pregunta">8.¿que es una figura geometrica?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="a" onclick="Engine(8,this. value)" /><span>a) Una figura geométrica es la representación visual y funcional de un conjunto no vacío y cerrado de puntos en un plano geométrico</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="b" onclick="Engine(8,this. value)" /><span>b) son formas no convencionales de emplear las palabras para dotarlas de expresividad, vivacidad o belleza, con el objeto de sorprender, emocionar, sugerir o persuadir.</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="c" onclick="Engine(8,this. value)" /><span>c) son aquellas que están limitadas por líneas rectas o curvas, además de que todos sus puntos están contenidos en un solo planoa</span></p>
+                      </label>
+                    </div>
+                 
+                <div class="boton">
+                <input type="button" class="btn modal-trigger" name="RESULTADOS" value="RESULTADOS" onclick="Score()"; />
+            </div>
+                
+                
+                    
+            </section>
+            </article>
+        
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="wrapp">
+            <ul class="tabss">
+                <li><a href="#tab1"><span class="tab-text"></span></a></li>
+                <li><a href="#tab2"><span class="tab-text"></span></a></li>
+                <!--<li><a href="#tab1"><span class="tab-text"></span></a></li>-->
+                <!--<li><a href="#tab2"><span class="tab-text"></span></a></li>-->
+            </ul>
+        </div>
+    
+
+    <script src="materialize.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems);
+        });
+    </script>
+</body>
+</html>
